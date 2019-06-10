@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - ComponentOne ASP.NET MVC Project</title>
     @Styles.Render("~/Content/css")
-    @Html.C1().Styles().Theme("material")
+    @Html.C1().Styles()
+    @Html.C1().Scripts()
+    @*@Html.C1().Styles().Theme("material")*@
 
     @RenderSection("styles", required: false)
 </head>
@@ -40,7 +42,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Html.C1().Scripts()
+    
     @RenderSection("scripts", required: false)
     @Html.C1().DeferredScripts()
 </body>
